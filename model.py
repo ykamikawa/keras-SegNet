@@ -69,7 +69,7 @@ def segnet(
     conv_13 = Activation("relu")(conv_13)
 
     pool_5, mask_5 = MaxPoolingWithArgmax2D(pool_size)(conv_13)
-    print("Build enceder done..")
+    print("Build encoder done..")
 
     # decoder
 
