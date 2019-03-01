@@ -30,7 +30,7 @@ def argparser():
     parser.add_argument("--epoch_steps", default=100, type=int,
             help="number of epoch step")
     parser.add_argument("--val_steps", default=10, type=int,
-            help="number of valdation step")
+            help="number of validation step")
     parser.add_argument("--n_labels", default=20, type=int,
             help="Number of label")
     parser.add_argument("--input_shape", default=(256, 256, 3),
@@ -44,7 +44,7 @@ def argparser():
     parser.add_argument("--loss", default="categorical_crossentropy", type=str,
             help="loss function")
     parser.add_argument("--optimizer", default="adadelta", type=str,
-            help="oprimizer")
+            help="optimizer")
     args = parser.parse_args()
 
     return args
@@ -79,7 +79,7 @@ def main(args):
             validation_steps=args.val_steps)
 
     model.save_weights(args.save_dir+str(args.n_epochs)+".hdf5")
-    print("sava weight done..")
+    print("save weight done..")
 
 
 if __name__ == "__main__":
